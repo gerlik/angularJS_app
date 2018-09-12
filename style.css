@@ -1,0 +1,40 @@
+/* style for angular app*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+body{
+    padding: 50px;
+    font-family: 'Exo', sans-serif;
+}
+
+header{
+    text-align: center;
+
+}
+
+#logo{
+    width: 50px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline;
+}
+
+li a{
+    text-decoration: none;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+
+}
+
+li a:hover{
+    background-color: gray;
+}
