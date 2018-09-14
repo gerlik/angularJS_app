@@ -7,7 +7,7 @@ html{
     height: 100%;
 }
 body{
-    
+
     font-family: 'Exo', sans-serif;
     padding-bottom: 6rem;
     margin: 0;
@@ -28,6 +28,16 @@ header{
     width: 150px;
 }
 
+#mvcimg{
+    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
+    /*width: 50%;*/
+}
+
+#pikklogo{
+    width: 20%;
+}
+
 ul{
     list-style-type: none;
     margin: 0;
@@ -43,8 +53,8 @@ li a{
     padding: 10px 25px;
     background-color: black;
     color: white;
-    border-radius: 10px;
-    
+    border-radius: 5px;
+
 }
 
 a{
@@ -56,7 +66,7 @@ a:visited{
 }
 
 li a:hover{
-    
+
     background-color: #3f3f3f;
 }
 
@@ -77,6 +87,10 @@ h3 {
 
 .content p {
     text-align: justify;
+}
+
+.todo{
+    text-align: center;
 }
 
 footer{
