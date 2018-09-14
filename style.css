@@ -3,11 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
+html{
+    height: 100%;
+}
 body{
-    padding: 50px;
+    
     font-family: 'Exo', sans-serif;
-    padding: 0;
+    padding-bottom: 6rem;
     margin: 0;
+    min-height: 100%;
+    position: relative;
 }
 
 header{
@@ -20,7 +25,7 @@ header{
 
 #logo{
     padding: 20px;
-    width: 20px;
+    width: 150px;
 }
 
 ul{
@@ -47,6 +52,24 @@ li a:hover{
     background-color: #3f3f3f;
 }
 
-footer{
-    text-align: center;
+.content{
+    margin: 0 auto;
+    padding-top: 64px;
+    max-width: 740px;
+    width: 94%;
 }
+
+h3 {
+    color: #0e69b7;
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+    background-color: #efefef;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
