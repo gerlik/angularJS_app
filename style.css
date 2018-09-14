@@ -38,7 +38,8 @@ li a{
     padding: 10px 25px;
     background-color: black;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
+    
 }
 
 li a:hover{
