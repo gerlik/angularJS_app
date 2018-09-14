@@ -47,9 +47,21 @@ li a{
     
 }
 
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #000;
+}
+
 li a:hover{
     
     background-color: #3f3f3f;
+}
+
+li a:visited{
+    color: #fff;
 }
 
 .content{
@@ -61,6 +73,10 @@ li a:hover{
 
 h3 {
     color: #0e69b7;
+}
+
+.content p {
+    text-align: justify;
 }
 
 footer{
