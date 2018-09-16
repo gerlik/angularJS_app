@@ -1,4 +1,4 @@
-/* style for angular app*/
+/* style for angular app */
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Exo');
@@ -7,9 +7,7 @@ html{
     height: 100%;
 }
 body{
-
     font-family: 'Exo', sans-serif;
-    padding-bottom: 6rem;
     margin: 0;
     min-height: 100%;
     position: relative;
@@ -18,24 +16,23 @@ body{
 header{
     text-align: center;
     background-color: #efefef;
-    margin: 0;
-    padding-bottom: 30px;
-
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 330px;
 }
 
 #logo{
-    padding: 20px;
-    width: 150px;
-}
-
-#mvcimg{
-    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(80%);
-    /*width: 50%;*/
-}
-
-#pikklogo{
-    width: 20%;
+    position: absolute;
+    padding-top: -20px;
+    width: 130px;
+    left:0;
+    top: -100px;
+    bottom:0;
+    right:0;
+    margin:auto;    
 }
 
 ul{
@@ -46,6 +43,7 @@ ul{
 
 li{
     display: inline;
+    font-size: 120%;
 }
 
 li a{
@@ -61,12 +59,25 @@ a{
     text-decoration: none;
 }
 
-a:visited{
+h1 {
+    padding-top: 180px;
     color: #000;
+    font-weight: bold;
+}
+
+h3 {
+    color: #0e69b7;
+}
+
+a:active{
+    color: #8a4090;
+}
+
+a:visited{
+    color: #8a4090;
 }
 
 li a:hover{
-
     background-color: #3f3f3f;
 }
 
@@ -76,13 +87,10 @@ li a:visited{
 
 .content{
     margin: 0 auto;
-    padding-top: 64px;
-    max-width: 740px;
+    padding-top: 350px;
+    padding-bottom: 120px;
+    max-width: 840px;
     width: 94%;
-}
-
-h3 {
-    color: #0e69b7;
 }
 
 .content p {
@@ -103,3 +111,16 @@ footer{
     padding: 1rem;
 }
 
+.left{
+    width: 50%;
+    height: 155px;
+    float: left;
+    background-color: #a42727;
+}
+
+.right{
+    width: 50%;
+    height: 155px;
+    float: left;
+    background-color: #d73131;
+}
