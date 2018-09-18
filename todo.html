@@ -34,29 +34,31 @@
                     </ul>
                 </nav>
             </header>
-            
-            <div class="content">
-                <div class="todo" ng-app="todoApp" ng-controller="todoController">
-                    <h3>TODOlist</h3>
 
-                   <!--TEST-->
+            <div class="content">
+                <h3>TODOlist</h3>
+                
+                <div class="tasklist" ng-app="todoApp" ng-controller="todoController">
+                    <!--TEST-->
                     <!--ng-repeat will loop through the taskList -->
                     <div ng-repeat='task in taskList'>
                         <!-- A checkbox displaying the progress -->
                         <input type='checkbox' ng-model='task.done' />
                         <!-- An information of a task -->
-                        <span ng-class='{done: task.done}'>{{task.task}}</span>
+                        <span class="checkmark" ng-class='{done: task.done}'>{{task.task}}</span>
                     </div>
                     <div class='input-form'>
                         <input type='text' ng-model='newTask' />
-                        <button ng-click='addTask(newTask)'>Add</button>
+                        <button id="addtask" ng-click='addTask(newTask)'>Add</button>
                     </div>
-                    
+
                 </div>
             </div>
+            
             <footer>
                 <p><b>Tartu 2018</b></p>
             </footer>
+            
         </div> 
         <script src="myApp.js"></script>
         <script src="myCtrl.js"></script>
