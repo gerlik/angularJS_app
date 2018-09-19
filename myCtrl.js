@@ -1,27 +1,42 @@
-//TODO fix the design, add deletation and edit options, move done tasks elswhere, show percentage or 1/4 tasks done etc
-//We have to define our application first
-angular.module("todoApp", []).controller("todoController", ['$scope',
+
+angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
                                  function($scope) {
                                      //A model holding tasks
                                      $scope.taskList = [
                                          {done: true,
-                                          task: 'Do nothing'
+                                          task: 'Tee valms TODO list'
                                          },
                                          {
                                              done: false,
-                                             task: 'Show some tasks'
+                                             task: 'Kasta lilli'
                                          }
                                      ];
 
                                      //Function for adding task to the task list
                                      $scope.addTask = function(task) {
-
-                                         //I'm pushing a new task to the task list
                                          $scope.taskList.push({
                                              done: false,
                                              task: task
                                          });
+                                         
+                                         // Cleared task form every time(no previous task text)
+                                         $scope.newTask = ""
                                      };
+                                     
+                                     // Get the percentage of done tasks
+                                     $scope.getTotalTodos = function(){
+                                         return $scope.taskList.length;
+                                     };
+                                     
+                                     // Clear completed tasks
+                                     $scope.clearCompleted = function(){
+                                         var completedTasks = $scope.taskList;
+                                         $scope.taskList = [];
+                                         angular.forEach(completedTasks, function(task){
+                                             if (!task.done) $scope.taskList.push(task);
+                                         })
+                                            
+                                     }
 
                                  }
                                 ]);

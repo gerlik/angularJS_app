@@ -37,28 +37,32 @@
 
             <div class="content">
                 <h3>TODOlist</h3>
-                
-                <div class="tasklist" ng-app="todoApp" ng-controller="todoController">
+
+                <div class="tasklist" ng-app="myTodoApp" ng-controller="myTodoCtrl">
                     <!--TEST-->
-                    <!--ng-repeat will loop through the taskList -->
-                    <div ng-repeat='task in taskList'>
-                        <!-- A checkbox displaying the progress -->
-                        <input type='checkbox' ng-model='task.done' />
-                        <!-- An information of a task -->
-                        <span class="checkmark" ng-class='{done: task.done}'>{{task.task}}</span>
-                    </div>
                     <div class='input-form'>
-                        <input type='text' ng-model='newTask' />
-                        <button id="addtask" ng-click='addTask(newTask)'>Add</button>
+                        <input type="text" maxlength="50" placeholder="Uus" ng-model='newTask'>
+
+                        <button id="addtask" ng-click='addTask(newTask)'>Lisa ülesanne</button>
+                        <button id="clearCompl" ng-click="clearCompleted()">Kustuta tehtud ülesanded</button>
+                        <br>
+                        
                     </div>
+                    <div ng-repeat="task in taskList">
+                        <input type="checkbox" ng-model="task.done">
+
+                        <span class="checkmark" ng-class="{done: task.done}">{{task.task}}</span>
+                    </div>
+                    <br>
+                    <span ng-class="">{{task.getTotalTodos()}}%</span><br>
 
                 </div>
             </div>
-            
+
             <footer>
                 <p><b>Tartu 2018</b></p>
             </footer>
-            
+
         </div> 
         <script src="myApp.js"></script>
         <script src="myCtrl.js"></script>

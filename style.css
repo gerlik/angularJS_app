@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
+/* BASIC STYLE; FRONT PAGE */
 html{
     height: 100%;
 }
@@ -97,14 +98,6 @@ li a:visited{
     text-align: justify;
 }
 
-.todo{
-    text-align: justify;
-}
-
-.task{
-    padding: 2px;
-}
-
 footer{
     position: absolute;
     text-align: center;
@@ -129,26 +122,19 @@ footer{
     background-color: #d73131;
 }
 
+/* TODO LIST */
+
 .tasklist{
     width: 100%;
     min-width: 250px;
-    text-align: left;
+    text-align: justify;
     font-size: 110%;
 }
 
 input[type='checkbox']{
-    opacity: 0;
+    height: 20px;
+    width: 20px;
     cursor: pointer; 
-}
-
-.checkmark{
-    height: 25px;
-    width: 25px;
-    background-color: #efefef;
-}
-
-.checkmark:hover input{
-    background-color: #ccc;
 }
 
 input[type='text']{
@@ -160,7 +146,7 @@ input[type='text']{
     font-family: 'Exo', sans-serif;
 }
 
-.tasklist button{
+.input-form button{
     padding: 10px 20px;
     border: 0px;
     background-color: #000;
@@ -170,3 +156,13 @@ input[type='text']{
     margin: 5px;
     text-transform: uppercase;
 }
+
+.checkmark{
+    text-align: justify;
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+/**/
