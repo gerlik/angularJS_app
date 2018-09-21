@@ -25,13 +25,9 @@ angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
                                     
                                      // Get the percentage of done tasks
                                      $scope.getTotalTodos = function(){
-                                         var total = $scope.taskList;
-                                         $scope.taskList = [];
-                                         angular.forEach(total, function(task){
-                                            if(task.done)
-                                                total++;
-                                        })
-                                         return total;
+                                         return $scope.taskList.filter(function(task){
+                                            return task.done;
+                                          }).length;
                                      };
                                      
                                      // Clear completed tasks
