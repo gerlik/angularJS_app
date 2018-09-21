@@ -162,7 +162,47 @@ input[type='text']{
 }
 
 .done{
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
-/**/
+/* EXAMPLES */
+
+
+/* RESOURCES */
+
+table{
+    border-collapse: collapse;
+    width: 100%;   
+}
+
+th, td{
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0e69b7;
+    color: white;
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: #efefef;
+}
+
+table a{
+    color: #d73131;
+}
+
+table a:visited{
+    color: #d73131;
+}
+
+
+
+
+
+
+
+

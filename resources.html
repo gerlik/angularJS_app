@@ -9,7 +9,6 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-        <!--        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">-->
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
@@ -35,13 +34,24 @@
                 </nav>
             </header>
 
-            <div class="content">
+            <div class="content" ng-app="myApp" ng-controller="myCtrl">
 
                 <h3>Materjalid</h3>
                 <p>
-
-
+                    Kui oled huvitatud Angulari õppimisest
                 </p>
+                <table>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Sait</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr ng-repeat='s in sources'>
+                        <td>{{s.nr}}</td>
+                        <td>{{s.name}}</td>
+                        <td><a href="{{s.link}}">{{s.link}}</a></td>
+                    </tr>
+                </table>
 
             </div>
             <footer>
