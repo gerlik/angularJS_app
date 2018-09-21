@@ -22,10 +22,16 @@ angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
                                          // Cleared task form every time(no previous task text)
                                          $scope.newTask = ""
                                      };
-                                     
+                                    
                                      // Get the percentage of done tasks
                                      $scope.getTotalTodos = function(){
-                                         return $scope.taskList.length;
+                                         var total = $scope.taskList;
+                                         $scope.taskList = [];
+                                         angular.forEach(total, function(task){
+                                            if(task.done)
+                                                total++;
+                                        })
+                                         return total;
                                      };
                                      
                                      // Clear completed tasks
@@ -37,6 +43,5 @@ angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
                                          })
                                             
                                      }
-
                                  }
                                 ]);

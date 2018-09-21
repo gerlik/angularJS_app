@@ -39,22 +39,22 @@
                 <h3>TODOlist</h3>
 
                 <div class="tasklist" ng-app="myTodoApp" ng-controller="myTodoCtrl">
-                    <!--TEST-->
+                    
+                    <div ng-repeat="task in taskList">
+                        <input type="checkbox" ng-model="task.done">
+
+                        <span class="checkmark" ng-class="{done: task.done}">{{task.task}}</span>
+                    </div>
+                    
                     <div class='input-form'>
                         <input type="text" maxlength="50" placeholder="Uus" ng-model='newTask'>
 
                         <button id="addtask" ng-click='addTask(newTask)'>Lisa ülesanne</button>
                         <button id="clearCompl" ng-click="clearCompleted()">Kustuta tehtud ülesanded</button>
                         <br>
-                        
                     </div>
-                    <div ng-repeat="task in taskList">
-                        <input type="checkbox" ng-model="task.done">
-
-                        <span class="checkmark" ng-class="{done: task.done}">{{task.task}}</span>
-                    </div>
-                    <br>
-                    <span ng-class="">{{task.getTotalTodos()}}%</span><br>
+                    <!--https://www.w3docs.com/snippets/angularjs/how-to-show-angularjs-filtered-count.html-->
+                    <span>{{ taskList.total | number }}/{{ taskList.length }} tehtud</span><br>
 
                 </div>
             </div>
