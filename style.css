@@ -47,13 +47,13 @@ li{
     font-size: 120%;
 }
 
-li a{
+nav a{
     text-decoration: none;
-    padding: 10px 25px;
     background-color: black;
     color: white;
     border-radius: 5px;
-
+    text-align: center;
+    padding: 10px 25px;
 }
 
 a{
@@ -169,10 +169,11 @@ input[type='text']{
 
 
 /* RESOURCES */
-
 table{
     border-collapse: collapse;
-    width: 100%;   
+    width: 100%; 
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 th, td{
@@ -182,7 +183,7 @@ th, td{
 }
 
 th {
-    background-color: #0e69b7;
+    background-color: #a42727;
     color: white;
     padding: 10px;
 }
@@ -192,13 +193,49 @@ tr:hover {
 }
 
 table a{
-    color: #d73131;
+    color: #8a4090;
 }
 
 table a:visited{
-    color: #d73131;
+    color: #8a4090;
 }
 
+/* THE GAME */
+
+
+
+
+/* FEEDBACK */
+input[type=submit] {
+    background-color: #000;
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: #3f3f3f;
+}
+
+.feedback label{
+    padding: 5px;
+    border: 1px;
+}
+
+.feedback input{
+    border-radius: 5px;
+}
+
+#subject{
+    min-height: 100px;
+}
 
 
 

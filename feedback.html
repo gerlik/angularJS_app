@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Playing around with angular;">
         <meta name="author" content="Gerli Kõiv">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
         <title>TODO</title>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -33,14 +34,23 @@
                     </ul>
                 </nav>
             </header>
-            
-            <div class="content">
+
+            <div class="content feedback">
 
                 <h3>Tagasiside</h3>
-                <p>
 
-
-                </p>
+                <form>
+                    <label for="fname">Nimi</label>
+                    <input type="text" id="name" name="name" placeholder="Nimi" ng-model="inputName" ng-maxlength="30">
+                    
+                    <label for="fname">E-posti aadress</label>
+                    <input type="text" id="email" name="email" placeholder="E-post" ng-model="" ng-maxlength="30">
+                    
+                    <label for="fname">Teema</label>
+                    <input type="text" id="subject" name="subject" placeholder="Kirjuta siia ..." ng-model="inputName" ng-maxlength="500">
+                    
+                    <input type="submit" value="Saada">
+                </form>
 
             </div>
             <footer>
