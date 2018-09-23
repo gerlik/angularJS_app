@@ -1,45 +1,46 @@
-
 angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
-                                                          function($scope) {
-                                                              //A model holding tasks
-                                                              $scope.taskList = [
-                                                                  {done: true,
-                                                                   task: 'Tee valms TODO list'
-                                                                  },
-                                                                  {
-                                                                      done: false,
-                                                                      task: 'Kasta lilli'
-                                                                  }
-                                                              ];
+function ($scope) {
+    
+        //A model holding tasks
+        $scope.taskList = [
+            {
+                done: true,
+                task: 'Tee valms TODO list'
+            },
+            {
+                done: false,
+                task: 'Kasta lilli'
+            }
+        ];
 
-                                                              //Function for adding task to the task list
-                                                              $scope.addTask = function(task) {
-                                                                  $scope.taskList.push({
-                                                                      done: false,
-                                                                      task: task
-                                                                  });
+        //Function for adding task to the task list
+        $scope.addTask = function (task) {
+            $scope.taskList.push({
+                done: false,
+                task: task
+            });
 
-                                                                  // Cleared task form every time(no previous task text)
-                                                                  $scope.newTask = ""
-                                                              };
+            // Cleared task form every time(no previous task text)
+            $scope.newTask = ""
+        };
 
-                                                              // Get the percentage of done tasks
-                                                              $scope.getTotalTodos = function(){
-                                                                  return $scope.taskList.filter(function(task){
-                                                                      return task.done;
-                                                                  }).length;
-                                                              };
+        // Get the percentage of done tasks
+        $scope.getTotalTodos = function () {
+            return $scope.taskList.filter(function (task) {
+                return task.done;
+            }).length;
+        };
 
-                                                              // Clear completed tasks
-                                                              $scope.clearCompleted = function(){
-                                                                  var completedTasks = $scope.taskList;
-                                                                  $scope.taskList = [];
-                                                                  angular.forEach(completedTasks, function(task){
-                                                                      if (!task.done) $scope.taskList.push(task);
-                                                                  })       
-                                                              }
-                                                          }
-                                                         ]);
+        // Clear completed tasks
+        $scope.clearCompleted = function () {
+            var completedTasks = $scope.taskList;
+            $scope.taskList = [];
+            angular.forEach(completedTasks, function (task) {
+                if (!task.done) $scope.taskList.push(task);
+            })
+        }
+    }
+]);
 
 
 angular.module("myApp", []).controller("myCtrl", function ($scope) {

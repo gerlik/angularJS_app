@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="et">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Playing around with angular;">
-        <meta name="author" content="Gerli Kõiv">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
-        <title>Avaleht</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-        <!--        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="favicon.ico"/>
-    </head>
-    <body>
-        <div>
-            <header>
-                <div class="left">
-                </div>
-                <div class="right">
-                    <a href="index.html"><img src="http://www.stickpng.com/assets/images/5847ea22cef1014c0b5e4833.png" alt="angularlogo" id="logo"></a>
-                </div>
-                <!-- pikem logo
-<a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/2000px-AngularJS_logo.svg.png" alt="angularlogo" id="logo"></a>-->
-                <a href="index.html"><h1>AngularJS Õppekeskkond</h1></a>
-                <nav>
-                    <ul>
-                        <li><a href="todo.html">TODO</a></li>
-                        <li><a href="example.html">Näited</a></li>
-                        <li><a href="resources.html">Materjalid</a></li>
-                        <li><a href="game.html">Mäng</a></li>
-                        <li><a href="feedback.html">Tagasiside</a></li>
-                    </ul>
-                </nav>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Playing around with angular;">
+    <meta name="author" content="Gerli Kõiv">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
+    <title>Avaleht</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-            <div class="content">
+    <!--        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
 
-                <h3>Mis on AngularJS?</h3>
-                <p>
-                    AngularJS (<a href="https://angularjs.org/">angularjs.org</a>) on Javascriptil baseeruv veebirakenduste raamistik. Selle abil saab laiendada HTML süntaksit, muutes selle kasutaja jaoks reaalajas reageerivaks.
-                    Näide: Kui klient vajutab veebilehel linki, siis ei laeta alla kogu lehte vaid mingi osa (Single Page Application).</p>
-
-                <p>
-                    Angulari saab kasutada veebiarenduseks, telefonides ja arvutites kui ka muudeks rakendusteks. Angulari hakkas arendama Google töötaja, Miško Hevery, 2009. aastal ning esimene versioon lasti välja 2012. aastal. Kuna Miško projet oli edukas ja tegemist oli mugava raamistikuga, siis toetab Google ise Angulari arendust tänaseni.</p>
-
-                <h3>Mis on MVC?</h3>
-
-                <p>
-                    <b>MVC</b> (Model-View-Controller) veebilehe arhitektuur jagab objektid kolmeks (mudel, vaade, kontroller) ja määrab ära, kuidas need omavahel suhtlevad. </p>
-
-                <p>
-                    <b>mudel (model)</b>– hoiab endas andmeid ja määrab ära kuidas andmeid töödeldakse.<br>
-                    <b>vaade (view)</b> – kõik mida kasutaja ekraanil näeb. Mida kuvada saadakse teada kontrollerilt.<br>
-                    <b>kontroller (controller)</b> – organiseerib mudeli ja vaate omavahelist tööd. Kui andmed muutuvad, siis kontroller teavitab sellest vaadet. Kontroller tegeleb ka kasutaja tegevuse tõlkimisega.
-                </p>
-
-                <p>AngularJS dokumentatsioon: <a href="https://docs.angularjs.org/api/">link Angulari lehele</a></p>
-
+<body>
+    <div>
+        <header>
+            <div class="left">
             </div>
-            <footer>
-                <p><b>Tartu 2018</b></p>
-            </footer>
-        </div> 
-        <script src="myApp.js"></script>
-        <script src="myCtrl.js"></script>
-    </body>
+            <div class="right">
+                <a href="index.html"><img src="http://www.stickpng.com/assets/images/5847ea22cef1014c0b5e4833.png" alt="angularlogo" id="logo"></a>
+            </div>
+            <!-- pikem logo
+<a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/2000px-AngularJS_logo.svg.png" alt="angularlogo" id="logo"></a>-->
+            <a href="index.html">
+                <h1>AngularJS Õppekeskkond</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li><a href="example.html">Näited</a></li>
+                    <li><a href="resources.html">Materjalid</a></li>
+                    <li><a href="game.html">Mäng</a></li>
+                    <li><a href="feedback.html">Tagasiside</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+
+            <h3>Mis on AngularJS?</h3>
+            <p>
+                AngularJS (<a href="https://angularjs.org/">angularjs.org</a>) on Javascriptil baseeruv veebirakenduste raamistik. Selle abil saab laiendada HTML süntaksit, muutes selle kasutaja jaoks reaalajas reageerivaks.
+                Näide: Kui klient vajutab veebilehel linki, siis ei laeta alla kogu lehte vaid mingi osa (Single Page Application).</p>
+
+            <p>
+                Angulari saab kasutada veebiarenduseks, telefonides ja arvutites kui ka muudeks rakendusteks. Angulari hakkas arendama Google töötaja, Miško Hevery, 2009. aastal ning esimene versioon lasti välja 2012. aastal. Kuna Miško projet oli edukas ja tegemist oli mugava raamistikuga, siis toetab Google ise Angulari arendust tänaseni.</p>
+
+            <h3>Mis on MVC?</h3>
+
+            <p>
+                <b>MVC</b> (Model-View-Controller) veebilehe arhitektuur jagab objektid kolmeks (mudel, vaade, kontroller) ja määrab ära, kuidas need omavahel suhtlevad. </p>
+
+            <p>
+                <b>mudel (model)</b>– hoiab endas andmeid ja määrab ära kuidas andmeid töödeldakse.<br>
+                <b>vaade (view)</b> – kõik mida kasutaja ekraanil näeb. Mida kuvada saadakse teada kontrollerilt.<br>
+                <b>kontroller (controller)</b> – organiseerib mudeli ja vaate omavahelist tööd. Kui andmed muutuvad, siis kontroller teavitab sellest vaadet. Kontroller tegeleb ka kasutaja tegevuse tõlkimisega.
+            </p>
+
+            <p>AngularJS dokumentatsioon: <a href="https://docs.angularjs.org/api/">link Angulari lehele</a></p>
+
+        </div>
+        <footer>
+            <p><b>Tartu 2018</b></p>
+        </footer>
+    </div>
+    <script src="myApp.js"></script>
+    <script src="myCtrl.js"></script>
+</body>
+
 </html>

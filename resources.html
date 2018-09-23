@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="et">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Playing around with angular;">
-        <meta name="author" content="Gerli Kõiv">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
-        <title>TODO</title>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="favicon.ico"/>
-    </head>
-    <body>
-        <div>
-            <header>
-                <div class="left">
-                </div>
-                <div class="right">
-                    <a href="index.html"><img src="http://www.stickpng.com/assets/images/5847ea22cef1014c0b5e4833.png" alt="angularlogo" id="logo"></a>
-                </div>
-                <!-- pikem logo
-<a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/2000px-AngularJS_logo.svg.png" alt="angularlogo" id="logo"></a>-->
-                <a href="index.html"><h1>AngularJS Õppekeskkond</h1></a>
-                <nav>
-                    <ul>
-                        <li><a href="todo.html">TODO</a></li>
-                        <li><a href="example.html">Näited</a></li>
-                        <li><a href="resources.html">Materjalid</a></li>
-                        <li><a href="game.html">Mäng</a></li>
-                        <li><a href="feedback.html">Tagasiside</a></li>
-                    </ul>
-                </nav>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Playing around with angular;">
+    <meta name="author" content="Gerli Kõiv">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
+    <title>TODO</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 
-            <div class="content" ng-app="myApp" ng-controller="myCtrl">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
 
-                <h3>Materjalid</h3>
-                <p>
-                    Kui oled huvitatud Angulari õppimisest
-                </p>
-                <table>
-                    <tr>
-                        <th>Nr</th>
-                        <th>Sait</th>
-                        <th>Link</th>
-                    </tr>
-                    <tr ng-repeat='s in sources'>
-                        <td>{{s.nr}}</td>
-                        <td>{{s.name}}</td>
-                        <td><a href="{{s.link}}">{{s.link}}</a></td>
-                    </tr>
-                </table>
-
+<body>
+    <div>
+        <header>
+            <div class="left">
             </div>
-            <footer>
-                <p><b>Tartu 2018</b></p>
-            </footer>
-        </div> 
-        <script src="myApp.js"></script>
-        <script src="myCtrl.js"></script>
-    </body>
+            <div class="right">
+                <a href="index.html"><img src="http://www.stickpng.com/assets/images/5847ea22cef1014c0b5e4833.png" alt="angularlogo" id="logo"></a>
+            </div>
+            <!-- pikem logo
+<a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/2000px-AngularJS_logo.svg.png" alt="angularlogo" id="logo"></a>-->
+            <a href="index.html">
+                <h1>AngularJS Õppekeskkond</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="todo.html">TODO</a></li>
+                    <li><a href="example.html">Näited</a></li>
+                    <li><a href="resources.html">Materjalid</a></li>
+                    <li><a href="game.html">Mäng</a></li>
+                    <li><a href="feedback.html">Tagasiside</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content resources" ng-app="myApp" ng-controller="myCtrl">
+
+            <h3>Materjalid</h3>
+            <p>
+                Kui oled huvitatud Angulari õppimisest
+            </p>
+            <table>
+                <tr>
+                    <th>Nr</th>
+                    <th>Sait</th>
+                    <th>Link</th>
+                </tr>
+                <tr ng-repeat='s in sources'>
+                    <td>{{s.nr}}</td>
+                    <td>{{s.name}}</td>
+                    <td><a href="{{s.link}}">{{s.link}}</a></td>
+                </tr>
+            </table>
+
+        </div>
+        <footer>
+            <p><b>Tartu 2018</b></p>
+        </footer>
+    </div>
+    <script src="myApp.js"></script>
+    <script src="myCtrl.js"></script>
+</body>
+
 </html>

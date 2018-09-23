@@ -3,18 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
-/* BASIC STYLE; FRONT PAGE */
-html{
+/* BASIC STYLE; FRONT PAGE; NAVBAR-HEADER-FOOTER */
+html {
     height: 100%;
 }
-body{
+
+body {
     font-family: 'Exo', sans-serif;
     margin: 0;
     min-height: 100%;
     position: relative;
 }
 
-header{
+header {
     text-align: center;
     background-color: #efefef;
     margin: 0 auto;
@@ -25,29 +26,29 @@ header{
     min-height: 330px;
 }
 
-#logo{
+#logo {
     position: absolute;
     padding-top: -20px;
     width: 130px;
-    left:0;
+    left: 0;
     top: -100px;
-    bottom:0;
-    right:0;
-    margin:auto;    
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }
 
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li{
+li {
     display: inline;
     font-size: 120%;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     background-color: black;
     color: white;
@@ -56,7 +57,7 @@ nav a{
     padding: 10px 25px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -70,23 +71,23 @@ h3 {
     color: #0e69b7;
 }
 
-a:active{
-    color: #8a4090;
+a:active {
+    color: #0e69b7;
 }
 
-a:visited{
-    color: #8a4090;
+a:visited {
+    color: #848484;
 }
 
-li a:hover{
+li a:hover {
     background-color: #3f3f3f;
 }
 
-li a:visited{
+li a:visited {
     color: #fff;
 }
 
-.content{
+.content {
     margin: 0 auto;
     padding-top: 350px;
     padding-bottom: 120px;
@@ -98,7 +99,7 @@ li a:visited{
     text-align: justify;
 }
 
-footer{
+footer {
     position: absolute;
     text-align: center;
     background-color: #efefef;
@@ -108,36 +109,39 @@ footer{
     padding: 1rem;
 }
 
-.left{
+.left {
     width: 50%;
     height: 155px;
     float: left;
     background-color: #a42727;
 }
 
-.right{
+.right {
     width: 50%;
     height: 155px;
     float: left;
     background-color: #d73131;
 }
 
-/* TODO LIST */
+.content a {
+    color: #0e69b7;
+}
 
-.tasklist{
+/* TODO LIST */
+.tasklist {
     width: 100%;
     min-width: 250px;
     text-align: justify;
     font-size: 110%;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     height: 20px;
     width: 20px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-input[type='text']{
+input[type='text'] {
     margin: 5px;
     padding: 5px;
     height: 20px;
@@ -146,7 +150,7 @@ input[type='text']{
     font-family: 'Exo', sans-serif;
 }
 
-.input-form button{
+.input-form button {
     padding: 10px 20px;
     border: 0px;
     background-color: #000;
@@ -157,11 +161,11 @@ input[type='text']{
     text-transform: uppercase;
 }
 
-.checkmark{
+.checkmark {
     text-align: justify;
 }
 
-.done{
+.done {
     text-decoration: line-through;
 }
 
@@ -169,14 +173,15 @@ input[type='text']{
 
 
 /* RESOURCES */
-table{
+table {
     border-collapse: collapse;
-    width: 100%; 
+    width: 100%;
     border-radius: 5px;
     overflow: hidden;
 }
 
-th, td{
+th,
+td {
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #ddd;
@@ -192,12 +197,12 @@ tr:hover {
     background-color: #efefef;
 }
 
-table a{
+.resources a {
     color: #8a4090;
 }
 
-table a:visited{
-    color: #8a4090;
+.resources a:visited {
+    color: #848484;
 }
 
 /* THE GAME */
@@ -206,7 +211,7 @@ table a:visited{
 
 
 /* FEEDBACK */
-input[type=submit] {
+button[type=submit]{
     background-color: #000;
     color: white;
     padding: 12px 50px;
@@ -217,29 +222,37 @@ input[type=submit] {
     text-align: center;
     display: block;
     font-family: 'Exo', sans-serif;
-    font-weight: bold;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
     background-color: #3f3f3f;
 }
 
-.feedback label{
+.feedback label {
     padding: 5px;
     border: 1px;
 }
 
-.feedback input{
+.feedback input, #email {
     border-radius: 5px;
+    font-family: 'Exo', sans-serif;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 100%;
 }
 
-#subject{
+textarea {
     min-height: 100px;
+    width: 100%;
+    resize: vertical;
+    font-family: 'Exo', sans-serif;
+    font-size: 100%;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 
-
-
-
-
-
-
+.feedback h3 {
+    padding: 5px;
+}
