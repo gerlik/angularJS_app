@@ -170,6 +170,18 @@ input[type='text'] {
 }
 
 /* EXAMPLES */
+.example{
+    
+}
+
+.red-bar.ng-enter {
+  transition:all ease-in 0.25s;
+  height: 0px;
+}
+
+.red-bar.ng-enter.ng-enter-active {
+  height: 30px;
+}
 
 
 /* RESOURCES */

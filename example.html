@@ -40,13 +40,21 @@
             </nav>
         </header>
 
-        <div class="content">
+        <div class="content" ng-app="">
 
             <h3>Näited</h3>
-            <p>
-            
-
-            </p>
+            <div class="example">
+                <button ng-click="showRed=true">Show Red Bars</button>
+                <button ng-click="showRed=false">Hide Red Bars</button>
+                <p ng-if="showRed" class="red-bar"></p>
+                <p></p>
+                <p ng-if="showRed" class="red-bar"></p>
+                <p></p>
+                <p ng-if="showRed" class="red-bar"></p>
+                <p></p>
+                <p ng-if="showRed" class="red-bar"></p>
+                <p></p>
+            </div>
 
         </div>
         <footer>

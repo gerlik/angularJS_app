@@ -1,6 +1,6 @@
 angular.module("myTodoApp", []).controller("myTodoCtrl", ['$scope',
 function ($scope) {
-    
+
         //A model holding tasks
         $scope.taskList = [
             {
@@ -81,3 +81,7 @@ angular.module("myApp", []).controller("myCtrl", function ($scope) {
         }
     ]
 });
+
+angular.module('app', ['ngAnimate']);
+
+
