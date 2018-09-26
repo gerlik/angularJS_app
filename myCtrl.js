@@ -82,6 +82,11 @@ angular.module("myApp", []).controller("myCtrl", function ($scope) {
     ]
 });
 
-angular.module('app', ['ngAnimate']);
+app.controller("codeController", function($scope, $route) {
+  $scope.code1 = {
+    name: "Kood1";
+    text: "lorem15"
+  }
+});
 
 

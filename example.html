@@ -44,51 +44,29 @@
 
             <h3>Näited</h3>
             <div class="example-section">
-                <p>AngularJS kasutusnäidised</p>
+                <p>AngularJS näiteid internetist</p>
 
                 <!--FIRST EXAMPLE-->
-                <div style="border: 1px solid black; border-radius: 5px; padding: 5px; margin: 5px 0px;">
-                    <div class="btns">
-                        <button class="expl-btn" ng-click="showexpl1=true">Näita näidet</button>
-                        <button class="code-btn" ng-click="showcode1=true">Näita koodi</button>
-                        <button class="hide-btn" ng-click="showexpl1=false;showcode1=false">Peida kõik</button>
-                    </div>
-                    <p class="showbtn">Lihtne interaktiivse vormi näide</p>
-                    <p ng-if="showexpl1" class="example">
-                        <img src="code1.PNG" alt="First_example">
-
-                    </p>
-                    <p ng-if="showcode1" class="example">
-                        <img src="expl1_1.PNG" alt="Code_example1">
-                        Lihtne vorm
-                        <img src="expl1_2.PNG" alt="Code_example2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, hic repellendus labore.
-                    </p>
-                </div>
+                <!--NEED SOMETHING LIKE https://codepen.io/Shokeen/pen/vxqdKL-->
+                <script type="text/ng-template" id="atmosphere.html">
+                    <h2>Name of the Planet: {{code1.name}}</h2>
+                    <p>Carbon Dioxide: {{code1.text}}</p>
+                  </script>
+                <h3>Näide1</h3>
+                <ul>
+                    <li><a href="#!/kood">Kood</a></li>
+                    <li><a href="#!/näide">Näide</a></li>
+                    <li><a href="#!/hide">Peida</a></li>
+                </ul>
 
                 <!--SECOND EXAMPLE-->
-                <div style="border: 1px solid black; border-radius: 5px; padding: 5px; margin: 5px 0px;">
-                    <div class="btns">
-                        <button class="expl-btn" ng-click="showexpl1=true">Näita näidet</button>
-                        <button class="code-btn" ng-click="showcode1=true">Näita koodi</button>
-                        <button class="hide-btn" ng-click="showexpl1=false;showcode1=false">Peida kõik</button>
-                    </div>
-                    <p class="showbtn">Lihtne interaktiivse vormi näide</p>
-                    <p ng-if="showexpl1" class="example">
-                        <img src="expl1_1.PNG" alt="Code_example1">
-                        <img src="expl1_2.PNG" alt="Code_example2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, hic repellendus labore.
-                    </p>
-                    <p ng-if="showcode1" class="example">
-                        <img src="code1.PNG" alt="First_example">
-
-                    </p>
-                </div>
 
                 <!--THIRD EXAMPLE-->
-                <p class="showbtn"></p>
-                <p ng-if="show3" class="example"></p>
-                <p class="showbtn"></p>
+                
+                <!--FOURTH EXAMPLE-->
+                
+                <!--FIFTH EXAMPLE-->
+                
 
             </div>
 
