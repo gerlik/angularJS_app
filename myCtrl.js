@@ -72,21 +72,13 @@ angular.module("myApp", []).controller("myCtrl", function ($scope) {
         {
             "nr": 6,
             "link": "https://thinkster.io/a-better-way-to-learn-angularjs",
-            "name": "thinkster",
+            "name": "thinkster"
         },
         {
             "nr": 7,
             "link": "nolink",
-            "name": "Youtube",
+            "name": "Youtube"
         }
     ]
 });
-
-app.controller("codeController", function($scope, $route) {
-  $scope.code1 = {
-    name: "Kood1";
-    text: "lorem15"
-  }
-});
-
 
