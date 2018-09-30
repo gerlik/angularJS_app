@@ -45,9 +45,9 @@
                 <div class="tab">
                     <button class="tablink" onclick="openTab(event, 'First')">Interaktiivne vorm</button>
                     <button class="tablink" onclick="openTab(event, 'Second')">Tabel</button>
-                    <button class="tablink" onclick="openTab(event, 'Third')">Kolmas</button>
-                    <button class="tablink" onclick="openTab(event, 'Fourth')">Neljas</button>
-                    <button class="tablink" onclick="openTab(event, 'Fifth')">Viies</button>
+                    <button class="tablink" onclick="openTab(event, 'Third')">Valideerimine</button>
+                    <button class="tablink" onclick="openTab(event, 'Fourth')">Filtreerimine</button>
+                    <button class="tablink" onclick="openTab(event, 'Fifth')">Animeerimine</button>
                 </div>
 
                 <!--FIRST EXAMPLE-->
@@ -55,45 +55,103 @@
                     <h3>Interaktiivne vorm</h3>
                     <p>
                         Lihtne vorm AngularJS-iga, mida täites toimub reaalajas ilma lehte värskendamata muutus.
+                        <a href="https://www.w3schools.com/angular/angular_forms.asp">Link</a>
                     </p>
                     <script type="text/ng-template" id="info.html">
                         <img src={{example.url}} alt="">
-                    <textarea ng-model="code" id="" cols="" rows="15"></textarea>
-                </script>
+                        <pre ng-model="code">{{code}}</pre>
+                    </script>
 
                     <ul>
-                        <li class="showCode"><a href="#!/example">Näita näidet</a></li>
-                        <li class="showExample"><a href="#!/code">Näita koodi</a></li>
+                        <li class="showCode1"><a href="#!/example1">Näita näidet</a></li>
+                        <li class="showExample1"><a href="#!/code1">Näita koodi</a></li>
                     </ul>
                     <div class="planet-container">
                         <div class="planet-view" ng-view></div>
                     </div>
                 </div>
+
                 <!--SECOND EXAMPLE-->
                 <div id="Second" class="tabcontent">
                     <h3>Tabel</h3>
                     <p>
-                        Tabel
+                        AngularJS-iga on tabeleid väga mugav kuvada ning kasutada erinevaid sortimisfiltreid. Tabelisse saab andmed võtta ka eraldi failist või lausa SQL failist.
+                        <a href="https://www.w3schools.com/angular/angular_tables.asp">Link</a>
                     </p>
                     <script type="text/ng-template" id="info.html">
                         <img src={{example.url}} alt="">
-                    <textarea ng-model="code" id="" cols="" rows="15"></textarea>
-                </script>
+                        <pre ng-model="code">{{code}}</pre>
+                    </script>
 
                     <ul>
-                        <li class="showCode"><a href="#!/example">Näita näidet</a></li>
-                        <li class="showExample"><a href="#!/code">Näita koodi</a></li>
+                        <li class="showCode"><a href="#!/example2">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code2">Näita koodi</a></li>
                     </ul>
                     <div class="planet-container">
                         <div class="planet-view" ng-view></div>
                     </div>
                 </div>
+
                 <!--THIRD EXAMPLE-->
+                <div id="Third" class="tabcontent">
+                    <h3>Valideerimine</h3>
+                    <p>
+                        AngularJS abil saab erinevaid vormi väljasid panna kontrollima, kas kasutaja on sisestanud õiges formaadis nime, e-maili või muu sisendi.
+                        <a href="https://www.w3schools.com/angular/angular_validation.asp">Link</a>
+                    </p>
+                    <script type="text/ng-template" id="info.html">
+                        <img src={{example.url}} alt="">
+                        <pre ng-model="code">{{code}}</pre>
+                    </script>
+
+                    <ul>
+                        <li class="showCode"><a href="#!/example3">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code3">Näita koodi</a></li>
+                    </ul>
+                    <div class="planet-container">
+                        <div class="planet-view" ng-view></div>
+                    </div>
+                </div>
 
                 <!--FOURTH EXAMPLE-->
+                <div id="Fourth" class="tabcontent">
+                    <h3>Filtrid</h3>
+                    <p>
+                        Filtrite abil saab andmekogumeid mugavalt ja kiirelt töödelda, leida üles vajalikud vasted, lugeda vasteid kokku ja palju muud. <a href="https://www.w3schools.com/angular/angular_services.asp">Link</a>
+                    </p>
+                    <script type="text/ng-template" id="info.html">
+                        <img src={{example.url}} alt="">
+                        <pre ng-model="code">{{code}}</pre>
+                    </script>
+
+                    <ul>
+                        <li class="showCode"><a href="#!/example4">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code4">Näita koodi</a></li>
+                    </ul>
+                    <div class="planet-container">
+                        <div class="planet-view" ng-view></div>
+                    </div>
+                </div>
 
                 <!--FIFTH EXAMPLE-->
+                <div id="Fifth" class="tabcontent">
+                    <h3>Animeerimine</h3>
+                    <p>
+                        Animeerimine AngularJS-iga ehk elementide kadumapanemine, keerutamine ja pööramine ning palju muud. <a href="https://www.w3schools.com/angular/angular_animations.asp">Link</a>
+                    </p>
+                    <script type="text/ng-template" id="info.html">
+                        <img src={{example.url}} alt="">
+                        <pre ng-model="code">{{code}}</pre>
+                </script>
 
+                    <ul>
+                        <li class="showCode"><a href="#!/example5">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code5">Näita koodi</a></li>
+                    </ul>
+                    <div class="planet-container">
+                        <div class="planet-view" ng-view></div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -101,6 +159,21 @@
             <p><b>Tartu 2018</b></p>
         </footer>
     </div>
+    <script>
+        function openTab(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
     <script src="myCtrl.js"></script>
 </body>
 
