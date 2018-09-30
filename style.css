@@ -170,8 +170,60 @@ input[type='text'] {
 }
 
 /* EXAMPLES */
-.examples{
+.examples {
     width: 100%;
+}
+
+.examples button {
+    padding: 10px 20px;
+    border: 0px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+}
+
+.examples textarea {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.examples li {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 2px 0;
+    background: #000;
+    border-radius: 5px;
+}
+
+.planet-view {
+    width: 100%;
+}
+
+.planet-view.ng-animate {
+    transition: all ease 0.4s;
+    position: absolute;
+}
+
+.planet-view.ng-enter {
+    right: 200px;
+    opacity: 0;
+}
+
+.planet-view.ng-leave,
+.planet-view.ng-enter.ng-enter-active {
+    right: 0;
+    opacity: 0.5;
+}
+
+.planet-view.ng-leave.ng-leave-active {
+    right: -200px;
+    opacity: 0;
 }
 
 
@@ -248,7 +300,7 @@ button[type=submit]:hover {
     font-size: 100%;
 }
 
-textarea {
+.feedback textarea {
     min-height: 100px;
     width: 100%;
     resize: vertical;

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- GITHUB: https://github.com/gerlik/angularJS_app -->
     <title>TODO</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
 
@@ -41,17 +41,53 @@
         </header>
 
         <div class="content">
-
-            <h3>Näited</h3>
-            <div class="examples" ng-app="" ng- controller="">
-                <p>AngularJS näiteid internetist</p>
+            <div class="examples" ng-app="exampleApp">
+                <div class="tab">
+                    <button class="tablink" onclick="openTab(event, 'First')">Interaktiivne vorm</button>
+                    <button class="tablink" onclick="openTab(event, 'Second')">Tabel</button>
+                    <button class="tablink" onclick="openTab(event, 'Third')">Kolmas</button>
+                    <button class="tablink" onclick="openTab(event, 'Fourth')">Neljas</button>
+                    <button class="tablink" onclick="openTab(event, 'Fifth')">Viies</button>
+                </div>
 
                 <!--FIRST EXAMPLE-->
+                <div id="First" class="tabcontent">
+                    <h3>Interaktiivne vorm</h3>
+                    <p>
+                        Lihtne vorm AngularJS-iga, mida täites toimub reaalajas ilma lehte värskendamata muutus.
+                    </p>
+                    <script type="text/ng-template" id="info.html">
+                        <img src={{example.url}} alt="">
+                    <textarea ng-model="code" id="" cols="" rows="15"></textarea>
+                </script>
 
-                <h3>Näide1</h3>
-                
+                    <ul>
+                        <li class="showCode"><a href="#!/example">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code">Näita koodi</a></li>
+                    </ul>
+                    <div class="planet-container">
+                        <div class="planet-view" ng-view></div>
+                    </div>
+                </div>
                 <!--SECOND EXAMPLE-->
+                <div id="Second" class="tabcontent">
+                    <h3>Tabel</h3>
+                    <p>
+                        Tabel
+                    </p>
+                    <script type="text/ng-template" id="info.html">
+                        <img src={{example.url}} alt="">
+                    <textarea ng-model="code" id="" cols="" rows="15"></textarea>
+                </script>
 
+                    <ul>
+                        <li class="showCode"><a href="#!/example">Näita näidet</a></li>
+                        <li class="showExample"><a href="#!/code">Näita koodi</a></li>
+                    </ul>
+                    <div class="planet-container">
+                        <div class="planet-view" ng-view></div>
+                    </div>
+                </div>
                 <!--THIRD EXAMPLE-->
 
                 <!--FOURTH EXAMPLE-->
@@ -60,13 +96,11 @@
 
 
             </div>
-
         </div>
         <footer>
             <p><b>Tartu 2018</b></p>
         </footer>
     </div>
-    <script src="myApp.js"></script>
     <script src="myCtrl.js"></script>
 </body>
 
