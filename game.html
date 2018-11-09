@@ -13,6 +13,8 @@
 
     <!--        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
+    <script type="text/javascript" src="game.js"></script>
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
@@ -40,13 +42,33 @@
             </nav>
         </header>
 
-        <div class="content">
+        <div class="content" ng-app="cards">
 
-            <h3>Mäng</h3>
-            <p>
+            <h3>Mälumäng</h3>
 
+            <div class="cntr" ng-controller="CardController">
+                <div class="timer" ng-class="{critical:isCritical}">
+                    {{timeLimit | date: 'm:ss'}}
+                </div>
+                <table class="table-top">
+                    <tr ng-repeat="row in deck.rows">
+                        <td ng-repeat="card in row.cards">
+                            <div class="card_container {{!card.isFaceUp ? '' : 'flip'}}" ng-click="isGuarding || check(card)">
+                                <div class="card shadow">
+                                    <div class="front face"></div>
+                                    <div class="back face text-center pagination-center">
+                                        <p> {{card.item}} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="startbtn">
+                    <button type="button" class="game-btn" ng-disabled="inGame == true" ng-click="start()">Start</button>
+                </div>
 
-            </p>
+            </div>
 
         </div>
         <footer>
