@@ -230,27 +230,27 @@ input[type='text'] {
 
 
 /* RESOURCES */
-table {
+.resources-table table {
     border-collapse: collapse;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
 }
 
-th,
-td {
+.resources-table th,
+.resources-table td {
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #ddd;
 }
 
-th {
+.resources-table th {
     background-color: #a42727;
     color: white;
     padding: 10px;
 }
 
-tr:hover {
+.resources-table tr:hover {
     background-color: #efefef;
 }
 
